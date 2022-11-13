@@ -1,0 +1,22 @@
+* {
+    margin: 0px;
+    font-family:  Impact, 'Arial Narrow Bold', sans-serif;
+}
+
+#header {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title {
+    text-align: center;
+    flex: 3 0 0px;
+}
+
+#reset {
+    display: flex; 
+    height: 40px;
+    width: 40px;
+}
