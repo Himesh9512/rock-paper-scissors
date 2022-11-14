@@ -29,18 +29,12 @@
     align-items: center;
 }
 
-#winner {
+#result {
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     flex: none;
     width: 240px;
     text-align: center;
-}
-
-.resetBtn {
-    height: 80px;
-    width: 170px;
-    background-color: grey;
 }
 
 #Board {
@@ -72,6 +66,12 @@
     justify-content: center;
     align-items: center;
     font-size: 20px;
+    background-color: grey;
+}
+
+.resetBtn {
+    height: 80px;
+    width: 170px;
     background-color: grey;
 }
 

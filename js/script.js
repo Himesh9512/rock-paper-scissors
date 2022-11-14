@@ -4,7 +4,7 @@ let computerScore = 0;
 
 const playerScoreBoard = document.getElementById('you');
 const computerScoreBoard = document.getElementById('computer');
-const result = document.getElementById('winner');
+const result = document.getElementById('result');
 const buttons = document.querySelectorAll('button');
 const afterGameOver = document.getElementById('reset');
 
@@ -83,7 +83,6 @@ function getComputerChoice() {
 // process after winner declared
 function afterWin(winner) {
 
-    console.log(winner);
     if (winner === 'you') {
         result.innerText = "You conquered machines!";
     } else {
@@ -92,22 +91,25 @@ function afterWin(winner) {
     createResetBtn();
     btnDisable();
 
+    // reset the page
+    function resetPage(){
+        window.location.reload();
+    }
     // disable all buttons so player cant play further
     function btnDisable() {
-        buttons.forEach(element => {
-            element.disabled = true;
+        buttons.forEach(button => {
+            button.disabled = true;
         })
     }
     // create reset button after winning match
     function createResetBtn() {
         const resetBtn = document.createElement('button');
+
         resetBtn.classList.add('resetBtn');
         resetBtn.textContent = "Play Again";
-
         afterGameOver.appendChild(resetBtn);
+
         resetBtn.disabled = false;
-        resetBtn.addEventListener('click', () => {
-            window.location.reload();
-        })
+        resetBtn.addEventListener('click', resetPage)
     }
 }
