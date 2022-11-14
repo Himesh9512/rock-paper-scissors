@@ -15,17 +15,37 @@
     flex: 3 0 0px;
 }
 
-#reset {
-    display: flex; 
-    height: 40px;
-    width: 40px;
-}
-
 /* || buttons */
 #buttons {
     display: flex;
     justify-content: space-around;
     padding: 40px;
+}
+
+#content {
+    display: flex;
+    height: 270px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#winner {
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 230px;
+    gap: 59px;
+}
+
+.score {
+    font-size: 123px;
 }
 
 .button {
